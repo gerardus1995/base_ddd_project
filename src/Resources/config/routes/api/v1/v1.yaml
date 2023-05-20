@@ -1,0 +1,4 @@
+short_urls:
+    path: /short-urls
+    controller: App\Controller\api\v1\ShortUrlsController
+    methods: [ POST ]

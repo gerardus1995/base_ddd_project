@@ -1,0 +1,8 @@
+v1_controllers:
+    resource: v1/v1.yaml
+    prefix: v1
+
+health_check:
+    path: /health
+    controller: App\Controller\api\HealthCheckController
+    methods: [ GET ]
