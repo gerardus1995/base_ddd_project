@@ -42,7 +42,10 @@ class BaseApiController extends AbstractController
         foreach ($requirements as $requirement) {
             $parameterKey = $requirement['value'];
 
-            if ($requirement['required'] && !array_key_exists($parameterKey, $parameters)) {
+            if (is_array($parameters) &&
+                $requirement['required'] &&
+                !array_key_exists($parameterKey, $parameters)
+            ) {
                 throw new BadRequestException();
             }
 
