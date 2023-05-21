@@ -4,7 +4,6 @@ namespace App\Widitrade\UrlShortener\Application\Find;
 
 use App\Widitrade\UrlShortener\Domain\ShortUrl\DTO\LongUrl;
 use App\Widitrade\UrlShortener\Domain\ShortUrl\DTO\ShortUrl;
-use App\Widitrade\UrlShortener\Domain\ShortUrl\DTO\Url;
 use App\Widitrade\UrlShortener\Domain\ShortUrl\MakeUrlShorterInterface;
 use Exception;
 
