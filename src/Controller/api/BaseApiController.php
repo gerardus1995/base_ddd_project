@@ -2,7 +2,7 @@
 
 namespace App\Controller\api;
 
-use App\Controller\api\Security\ApiTokenAuthenticator;
+use App\Resources\Security\ApiTokenAuthenticator;
 use App\Widitrade\Shared\Exceptions\AuthenticationFailedException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;

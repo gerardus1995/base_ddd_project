@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\api\Security;
+namespace App\Resources\Security;
 
 use Symfony\Component\HttpFoundation\Request;
 

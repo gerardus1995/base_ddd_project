@@ -2,6 +2,7 @@
 
 namespace App\Widitrade\UrlShortener\Infrastructure\TinyUrl;
 
+use App\Widitrade\UrlShortener\Domain\ShortUrl\MakeUrlShorterInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -9,7 +10,7 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class MakeUrlShorter
+class MakeUrlShorter implements MakeUrlShorterInterface
 {
     private HttpClientInterface $httpClient;
     private string $apiUrl;
@@ -20,7 +21,7 @@ class MakeUrlShorter
         $this->apiUrl = $tinyUrlShortUrl;
     }
 
-    public function callApi(string $url): ?string
+    public function callApi(string $url): string
     {
         try {
             $response = $this->httpClient->request(
